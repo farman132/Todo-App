@@ -1,70 +1,68 @@
-📝 Todo In-Memory Python Console App – Phase I
+# 📝 Todo In-Memory Python Console App – Phase I
 
-Created by: Muhammad Farman 👨‍💻
-Status: ✅ Phase I Complete | 🚀 Future Phases Planned
+**Created by:** Muhammad Farman 👨‍💻  
+**Status:** ✅ Phase I Complete | 🚀 Future Phases Planned  
 
-Welcome to the Todo App, a spec-driven Python console application built entirely using Claude Code and Spec-Kit Plus. This project demonstrates a clean code, agentic development workflow, and serves as the foundation for advanced todo applications in the future.
+Welcome to the **Todo App**, a **spec-driven Python console application** built entirely using **Claude Code** and **Spec-Kit Plus**. This project demonstrates a **clean code, agentic development workflow**, and serves as the foundation for advanced todo applications in the future.
 
-🎯 Project Objective
+---
 
-Build a command-line todo application with in-memory storage that:
+## 🎯 **Project Objective**
 
-Follows spec-driven development
+Build a **command-line todo application** with **in-memory storage** that:
 
-Implements core todo features
+1. Follows **spec-driven development**  
+2. Implements **core todo features**  
+3. Uses **Claude Code + Spec-Kit Plus** workflow:  
+   - 📝 Write spec  
+   - 🗂 Generate plan  
+   - ⚡ Break into tasks  
+   - 🤖 Implement via Claude Code  
 
-Uses Claude Code + Spec-Kit Plus workflow:
+> 💡 **No manual coding was done – fully automated spec-driven development.**
 
-📝 Write spec
+---
 
-🗂 Generate plan
+## 🚀 **Phase I – Features Implemented (Basic Level)**
 
-⚡ Break into tasks
+This phase satisfies all **Phase I requirements**:
 
-🤖 Implement via Claude Code
+| Feature | Description | Status |
+|-------|------------|--------|
+| **Add Task** 🆕 | Create new todo items and store them in memory | ✅ Completed |
+| **Delete Task** ❌ | Remove tasks from the list | ✅ Completed |
+| **Update Task** ✏️ | Modify existing task details | ✅ Completed |
+| **View Task List** 📋 | Display all tasks with their status | ✅ Completed |
+| **Mark as Complete** ✅ | Toggle task completion status | ✅ Completed |
 
-💡 No manual coding was done – fully automated spec-driven development.
+> 🌟 **All features implemented according to clean code principles and project specs.**
 
-🚀 Phase I – Features Implemented (Basic Level)
+---
 
-This phase satisfies all Phase I requirements:
+## 🛠 **Technology Stack**
 
-Feature	Description	Status
-Add Task 🆕	Create new todo items and store them in memory	✅ Completed
-Delete Task ❌	Remove tasks from the list	✅ Completed
-Update Task ✏️	Modify existing task details	✅ Completed
-View Task List 📋	Display all tasks with their status	✅ Completed
-Mark as Complete ✅	Toggle task completion status	✅ Completed
+- **Python 3.13+** 🐍  
+- **Claude Code** 🤖 *(automated code generation)*  
+- **Spec-Kit Plus** 📚 *(specification-driven development)*  
 
-🌟 All features implemented according to clean code principles and project specs.
+---
 
-🛠 Technology Stack
+## ⚙️ **Installation**
 
-Python 3.13+ 🐍
+- Clone or download this repository 📥  
+- Navigate to the **project root directory**  
+- Ensure **Python 3.13+** is installed on your system 🐍  
 
-Claude Code 🤖 (for automated code generation)
+Verify Python version:
 
-Spec-Kit Plus 📚 (for specification-driven development)
-
-⚙️ Installation
-
-Clone or download this repository 📥
-
-Navigate to the project root directory
-
-Ensure Python 3.13+ is installed on your system 🐍
-
-Verify Python version using:
-
+```bash
 python --version
-
 ▶️ Usage
-
 Run the Todo application from the project root:
 
+bash
+Copy code
 python -m src.todo_app.main
-
-
 🖥️ Follow the console prompts to:
 
 ➕ Add tasks
@@ -78,18 +76,17 @@ python -m src.todo_app.main
 ✅ Mark tasks as complete
 
 💡 Note:
-All tasks are stored in memory only. No database or external storage is used in Phase I.
+All tasks are stored in memory only.
+No database or external storage is used in Phase I.
 
 🤖 Claude Code Integration
-
 Fully implemented via Claude Code with Spec-Kit Plus
 
 Task breakdowns, iterations, and automated coding are documented in CLAUDE.md
 
-Demonstrates agentic dev workflow for reproducible development
+Demonstrates an agentic development workflow for reproducibility
 
 📜 Project Highlights
-
 ✅ Full Phase I requirements implemented
 
 ✅ Clean, maintainable Python code
@@ -101,28 +98,25 @@ Demonstrates agentic dev workflow for reproducible development
 👨‍💻 Developed by Muhammad Farman
 
 🔮 Future Phases
-
 This project will evolve through the following phases:
 
 Phase	Name	Description
 Phase I	In-Memory Python Console App	✅ Complete
-Phase II	Full-Stack Web Application	🌐 Build a web version with persistent storage
-Phase III	AI-Powered Todo Chatbot	🤖 Integrate AI to manage tasks via chatbot
-Phase IV	Local Kubernetes Deployment	☸️ Deploy app in local Kubernetes cluster
-Phase V	Advanced Cloud Deployment	☁️ Full cloud-based scalable deployment
+Phase II	Full-Stack Web Application	🌐 Persistent storage & web UI
+Phase III	AI-Powered Todo Chatbot	🤖 AI-driven task interaction
+Phase IV	Local Kubernetes Deployment	☸️ Local container orchestration
+Phase V	Advanced Cloud Deployment	☁️ Scalable cloud infrastructure
 
 🏗 Each phase will be developed step-by-step using the same spec-driven workflow.
 
 💬 Contributions
-
 Contributions are welcome! Please ensure:
 
-All code follows spec-driven development principles
+Code follows spec-driven development principles
 
-Clean code and architecture are maintained
+Clean code architecture is maintained
 
 Future phases continue the Agentic Dev Stack workflow
 
 📄 License
-
-MIT License – see LICENSE file for details.
+MIT License – see the LICENSE file for details.
