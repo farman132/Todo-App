@@ -120,3 +120,6 @@ Future phases continue the Agentic Dev Stack workflow
 
 📄 License
 MIT License – see the LICENSE file for details.
+
+yaml
+Copy code
