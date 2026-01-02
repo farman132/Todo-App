@@ -16,7 +16,7 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 
 ## Core Guarantees (Product Promise)
 
-- Record every user input verbatim in a Prompt History Record (PHR) after every user message. Do not truncate; preserve full multiline input.
+- Record every user input verbatim in a Prompt History Record (PHR) after every user prompt.
 - PHR routing (all under `history/prompts/`):
   - Constitution → `history/prompts/constitution/`
   - Feature-specific → `history/prompts/<feature-name>/`
@@ -113,7 +113,7 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 1.  **Ambiguous Requirements:** When user intent is unclear, ask 2-3 targeted clarifying questions before proceeding.
 2.  **Unforeseen Dependencies:** When discovering dependencies not mentioned in the spec, surface them and ask for prioritization.
 3.  **Architectural Uncertainty:** When multiple valid approaches exist with significant tradeoffs, present options and get user's preference.
-4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps. 
+4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps.
 
 ## Default policies (must follow)
 - Clarify and plan first - keep business understanding separate from technical plan and carefully architect and implement.
@@ -208,3 +208,16 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Spec-Driven Development Workflow
+
+This project follows a spec-driven development approach using Claude Code and Spec-Kit Plus:
+
+1. **Specification**: Define requirements with `/sp.specify`
+2. **Planning**: Create architecture with `/sp.plan`
+3. **Tasks**: Generate implementation tasks with `/sp.tasks`
+4. **Implementation**: Execute tasks with `/sp.implement`
+5. **Testing**: Validate implementation against specifications
+6. **Documentation**: Update documentation as needed
+
+This workflow ensures that all development is driven by clear specifications and follows clean architecture principles.

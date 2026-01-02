@@ -1,55 +1,57 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: 1.0.0 → 1.1.0
+Modified principles: [PRINCIPLE_1_NAME] → Simplicity, [PRINCIPLE_2_NAME] → Reliability, [PRINCIPLE_3_NAME] → Maintainability, [PRINCIPLE_4_NAME] → Spec-driven Development, [PRINCIPLE_5_NAME] → In-Memory Storage
+Added sections: Additional Constraints, Development Workflow
+Removed sections: None
+Templates requiring updates:
+  - .specify/templates/plan-template.md ✅ updated
+  - .specify/templates/spec-template.md ✅ updated
+  - .specify/templates/tasks-template.md ✅ updated
+  - .specify/templates/commands/*.md ✅ reviewed
+Follow-up TODOs: None
+-->
+
+# Todo In-Memory Python Console App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Simplicity
+The app must be easy to use via command-line interface. All user interactions follow clear, intuitive patterns with minimal cognitive load. Command structure follows common CLI conventions with consistent argument patterns and helpful usage messages.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Reliability
+All operations (Add, Delete, Update, View, Mark Complete) must work without errors. Each feature includes comprehensive error handling and validation. The application provides clear feedback for all operations and gracefully handles invalid inputs or edge cases.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Maintainability
+Follow clean code practices and Pythonic conventions. Code structure follows established Python patterns with clear separation of concerns. All functions have clear responsibilities, meaningful names, and appropriate documentation. Code formatting follows PEP 8 standards.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Spec-driven Development
+Use Claude Code and Spec-Kit Plus to generate and track features. All feature development begins with specification documentation before implementation. Changes to functionality are documented in specs history to maintain traceability and ensure consistent development practices.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### In-Memory Storage
+Tasks are stored only during runtime, no external database required. All task data exists only in memory during application execution. No persistent storage mechanisms are implemented, ensuring the application is stateless between runs.
 
-### [PRINCIPLE_6_NAME]
+### Python Compatibility
+Code must be compatible with Python 3.13+. All dependencies and language features used are compatible with the specified Python version range. The application includes version checks where appropriate to ensure compatibility.
 
+## Additional Constraints
 
-[PRINCIPLE__DESCRIPTION]
+- No external database or persistent storage allowed
+- CLI-only interface, no GUI required
+- Feature set strictly limited to Basic Level (Add, Delete, Update, View, Mark Complete)
+- Task IDs must be unique integers
+- Task listing must show status indicators (✔ for complete, ✖ for incomplete)
+- Project structure must follow: /src for code, /specs for specification history
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- All feature changes must be documented in specs history
+- Task data must include at minimum: ID, Title, Description, Status (Complete/Incomplete)
+- Each feature must have clear CLI prompts and feedback messages
+- All features must be tested before implementation completion
+- Code follows clean architecture principles with clear separation of concerns
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development decisions for the Todo In-Memory Python Console App. All code changes, feature additions, and architectural decisions must align with these principles. Amendments to this constitution require explicit documentation and approval from project maintainers. All pull requests must demonstrate compliance with these principles before merging.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02
