@@ -1,3 +1,4 @@
+
 # Implementation Plan: [FEATURE]
 
 **Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
@@ -31,7 +32,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- All new features must align with Usability principle (organized and practical for real users)
+- Extensibility principle must be maintained (support new features without breaking existing functionality)
+- All operations must work without errors per Reliability principle
+- CLI-only interface must be preserved per constraints
+- In-memory storage must be maintained per constraints
+- Task IDs must remain unique integers per constraints
+- Basic features must remain functional when adding new features
+- Python 3.13+ compatibility must be maintained
+- For Intermediate features: Prioritization & Categorization, Search & Filter, Sort Capabilities must be implemented
+- For Advanced features: Recurring Tasks, Due Dates & Time Reminders must be implemented
 
 ## Project Structure
 
